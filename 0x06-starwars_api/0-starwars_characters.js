@@ -8,7 +8,7 @@ const requestAsync = promisify(request);
 
 const url = `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`;
 
-async function getFilmData() {
+async function getFilmData () {
   try {
     const response = await requestAsync(url);
     const data = JSON.parse(response.body);
