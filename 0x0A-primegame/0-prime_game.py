@@ -3,6 +3,7 @@
 The prime game algorithm module.
 """
 
+
 def is_prime(n):
     """
     Check if a number is prime.
@@ -20,6 +21,7 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
 
 def primes_from_range(n):
     """
@@ -39,12 +41,14 @@ def primes_from_range(n):
             primes.append(i)
     return primes
 
+
 def round_winner(primes):
     """
     Simulate a round of the prime game.
 
     Maria and Ben take turns playing. Maria starts first.
-    Each player picks a prime number and removes it and its multiples from the list.
+    Each player picks a prime number and
+    removes it and its multiples from the list.
     The player who cannot make a move loses.
 
     Args:
@@ -64,16 +68,19 @@ def round_winner(primes):
         current_player = 1 - current_player
     return "Maria" if current_player == 1 else "Ben"
 
+
 def isWinner(x, nums):
     """
     Determine the overall winner after x rounds of the prime game.
 
     Args:
         x (int): The number of rounds.
-        nums (list): A list of integers representing the upper limit for each round.
+        nums (list): A list of integers representing
+        the upper limit for each round.
 
     Returns:
-        str: "Maria" if Maria wins more rounds, "Ben" if Ben wins more rounds,
+        str: "Maria" if Maria wins more rounds,
+        "Ben" if Ben wins more rounds,
              or None if there is a tie.
     """
     # first check
